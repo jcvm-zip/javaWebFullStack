@@ -13,11 +13,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Slf4j
 public class ApachePoi {
     public static void main(String[] args) throws IOException {
 
-        File file = new File("/home/jeffeson/Documentos/Code/java/javaFullStack/Jdev/src/Arquivos/data/arquivo.xsl");
+        File file = new File("/home/jeffeson/Documentos/Code/java/javaFullStack/Jdev/src/Arquivos/data/arquivo.xls");
 
         if (!file.exists()) {
             file.createNewFile();
@@ -47,8 +46,6 @@ public class ApachePoi {
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
         HSSFWorkbook linhasPessoa = hssfWorkbook.createSheet("Planilha de pessoas").getWorkbook();
 
-
-        //Montando a planilha
         int numeroLinha = 0;
         for (Pessoa p : pessoas) {
 
